@@ -12,8 +12,6 @@ ans = 0
 def is_palindrome(n):
     if str(n)[::] == str(n)[::-1]:
         return True
-    else:
-        return False
 
 
 while a >= 100:
