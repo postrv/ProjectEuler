@@ -22,7 +22,7 @@ def is_prime(x):
     if x == 2:
         return True
     else:
-        for i in range(2, x, 1):#  could divide x // 2 here but causes 4 to return false
+        for i in range(2, x, 1):#  could divide x // 2 here but causes 4 to return True
             if (x % i) == 0:
                 return False
         else:
