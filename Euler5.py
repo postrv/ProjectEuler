@@ -14,7 +14,8 @@ primes = []
 not_primes = []
 ans = 1
 
-
+import time
+t0 = time.time()
 def is_prime(x):
     if x <= 1:
         return False
@@ -36,10 +37,10 @@ for n in range(1 , 21):
 
 print(primes)
 print(not_primes)
-exponent_ct_2 = 0
-exponent_ct_3 = 0
+exponent_ct_2 = -1  #  because these numbers already exist in the list of primes we want to subtract 1 when finding exponent
+exponent_ct_3 = -1
 
-for a in primes:#  finding the exponents to generate the composites and complete the list
+for a in primes:  #  finding the exponents to generate the composites and complete the list
     for b in primes:
         for c in not_primes:
             if a*b == c:
@@ -51,7 +52,9 @@ for a in primes:#  finding the exponents to generate the composites and complete
                             exponent_ct_3 += 1
 
 
-exponents = (1*2**(exponent_ct_2-1)*3**(exponent_ct_3-1))
+exponents = (2**(exponent_ct_2)*3**(exponent_ct_3))
 for x in primes:
     ans *= x
 print(ans*exponents)
+t1 = time.time()
+print(t0 - t1)
