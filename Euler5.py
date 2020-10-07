@@ -14,7 +14,8 @@ primes = []
 not_primes = []
 ans = 1
 
-
+import time
+t0 = time.time()
 def is_prime(x):
     if x <= 1:
         return False
@@ -55,3 +56,5 @@ exponents = (1*2**(exponent_ct_2-1)*3**(exponent_ct_3-1))
 for x in primes:
     ans *= x
 print(ans*exponents)
+t1 = time.time()
+print(t0 - t1)
