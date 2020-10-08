@@ -8,16 +8,29 @@ the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of
 the even-valued terms."""
 
+#for loop used because recursion does not scale
+
+import time
+t0 = time.time()
+ans = 0
+limit = 4000000
 fib1 = 1
 fib2 = 1
-fib3 = fib1 + fib2
-limit = 4000000
-ans = 0
+fib3 = 0
+
+
+def is_even(x):  #  bitwise operation to more efficiently test whether x is even
+    if x & 1 == 0:
+        return True
 
 
 while fib3 < limit:
-    ans += fib3  #removed evenness check because every 3rd term is even
-    fib1 = fib2 + fib3
-    fib2 = fib1 + fib3
     fib3 = fib1 + fib2
+    if is_even(fib3):
+        ans += fib3
+    fib1 = fib2
+    fib2 = fib3
 print(ans)
+
+t1 = time.time()
+print(t1-t0)
