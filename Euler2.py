@@ -8,7 +8,7 @@ the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of
 the even-valued terms."""
 
-#for loop used because recursion does not scale
+#for loop used because recursion without caching does not scale
 
 import time
 t0 = time.time()
