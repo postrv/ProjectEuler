@@ -4,7 +4,6 @@ Problem 5
 
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20? """
 
-#  code to genuinely laugh at
 #  find the prime factors
 #  find the composites that eliminate the need to test their prime factors e.g. 15 and 18 eliminate 3
 #  make a record of these exponents
