@@ -56,4 +56,4 @@ for x in primes:
     ans *= x
 print(ans*exponents)
 t1 = time.time()
-print(t0 - t1)
+print(t1 - t0)
