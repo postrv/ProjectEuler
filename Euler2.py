@@ -32,5 +32,6 @@ while fib3 < limit:
     fib2 = fib3
 print(ans)
 
+
 t1 = time.time()
 print(t1-t0)
