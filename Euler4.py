@@ -5,8 +5,12 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 
 Find the largest palindrome made from the product of two 3-digit numbers. """
 
+
+import time
+
 a = 999
 ans = 0
+t0 = time.time()
 
 
 def is_palindrome(n):
@@ -14,9 +18,9 @@ def is_palindrome(n):
         return True
 
 
-while a >= 100:
+for a in range(1000, 100, -1):
     b = 999
-    while b >= a:
+    for b in range(1000, a, -1):
         if a * b <= ans:
             break
         if is_palindrome(a * b):
@@ -25,3 +29,5 @@ while a >= 100:
         b -= 1
     a -= 1
 print(ans)
+t1 = time.time()
+print(t1-t0)
