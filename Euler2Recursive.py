@@ -15,14 +15,7 @@ import functools
 
 
 t0 = time.time()
-
-
 ans = 0
-limit = 4000000
-test_range = 10
-cache_array = []
-fib = 0
-initial = 0
 
 
 def is_even(i):  #  bitwise operation to more efficiently test whether x is even
